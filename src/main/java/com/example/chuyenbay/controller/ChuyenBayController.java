@@ -44,4 +44,8 @@ public class ChuyenBayController {
 		public List<Object> chuyenBayMoiGa(){
 			return chuyenBayRepository.chuyenBayMoiGa();
 		}
+		@GetMapping("/chuyenBayMoiGaChiPhi")
+		public List<Object> chuyenBayMoiGaChiPhi(){
+			return chuyenBayRepository.chuyenBayMoiGaChiPhi();
+		}
 }
