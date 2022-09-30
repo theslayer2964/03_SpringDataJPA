@@ -21,4 +21,8 @@ public class NhanVienController {
 	public List<NhanVien> getNVLuong10(){
 		return nhanVienRepository.getNVLuong10();
 	}
+	@GetMapping("/getTongLuong")
+	public double getTongLuong(){
+		return nhanVienRepository.getTongLuong();
+	}
 }

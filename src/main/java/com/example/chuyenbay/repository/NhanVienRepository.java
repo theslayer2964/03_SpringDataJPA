@@ -13,4 +13,7 @@ public interface NhanVienRepository extends CrudRepository<NhanVien, String> {
 	
 	@Query(value = "select * from nhanVien where Luong < 10000", nativeQuery = true)
 	List<NhanVien> getNVLuong10();
+	
+	@Query(value = "select sum(Luong) from nhanVien ", nativeQuery = true)
+	double getTongLuong();
 }
