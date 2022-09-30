@@ -13,4 +13,7 @@ public interface MayBayRepository extends CrudRepository<MayBay	, String> {
 	
 	@Query(value = "select * from maybay where Loai like '%Airbus%' ", nativeQuery = true)
 	List<MayBay> findMayBayAirbus();
+	
+	@Query(value = "select Loai from maybay where TamBay > 10000 ", nativeQuery = true)
+	List<String> findLoaiMBTam10KM();
 }
