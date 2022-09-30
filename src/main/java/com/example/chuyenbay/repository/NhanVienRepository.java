@@ -38,4 +38,7 @@ public interface NhanVienRepository extends CrudRepository<NhanVien, String> {
 			+ "	(select MaNV from chungnhan h group by MaNV having count(h.MaMB) > 3) \r\n"
 			+ "    order by MaNV, TamBay desc", nativeQuery = true)
 	List<Object> cau23();
+	
+	@Query(value = "select MaNV, count(MaMB) from chungnhan group by MaNV", nativeQuery = true)
+	List<Object> cau24();
 }
