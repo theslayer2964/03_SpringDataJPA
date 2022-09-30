@@ -21,7 +21,7 @@ public class NhanVien {
 	@Id
 	@Column(name = "MaNV")
 	private String maNV;
-	@Column(name = "TenNV")
+	@Column(name = "Ten")
 	private String ten;
 	@Column(name = "Luong")
 	private int luong;
