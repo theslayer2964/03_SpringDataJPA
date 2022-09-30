@@ -41,4 +41,6 @@ public interface NhanVienRepository extends CrudRepository<NhanVien, String> {
 	
 	@Query(value = "select MaNV, count(MaMB) from chungnhan group by MaNV", nativeQuery = true)
 	List<Object> cau24();
+	@Query(value = "select * from nhanvien nv left join chungnhan cn on cn.MaNV = nv.MaNV where cn.MaNV is null", nativeQuery = true)
+	List<NhanVien> getNVKoPhiCong();
 }

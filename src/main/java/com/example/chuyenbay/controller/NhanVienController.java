@@ -53,4 +53,8 @@ public class NhanVienController {
 	public List<Object> cau24(){
 		return nhanVienRepository.cau24();
 	}
+	@GetMapping("/getNVKoPhiCong")
+	public List<NhanVien> getNVKoPhiCong(){
+		return nhanVienRepository.getNVKoPhiCong();
+	}
 }
