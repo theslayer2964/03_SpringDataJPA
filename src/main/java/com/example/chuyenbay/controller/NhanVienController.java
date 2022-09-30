@@ -37,4 +37,8 @@ public class NhanVienController {
 	public List<String> getNVBeingNAirbus(){
 		return nhanVienRepository.getNVBeingNAirbus();
 	}
+	@GetMapping("/getTenNvLaiBoeing")
+	public List<String> getTenNvLaiBoeing(){
+		return nhanVienRepository.getTenNvLaiBoeing();
+	}
 }
