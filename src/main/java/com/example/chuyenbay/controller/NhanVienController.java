@@ -29,4 +29,8 @@ public class NhanVienController {
 	public List<String> getNvLaiBoeing(){
 		return nhanVienRepository.getNvLaiBoeing();
 	}
+	@GetMapping("/getNVLai747")
+	public List<String> getNVLai747(){
+		return nhanVienRepository.getNVLai747();
+	}
 }
