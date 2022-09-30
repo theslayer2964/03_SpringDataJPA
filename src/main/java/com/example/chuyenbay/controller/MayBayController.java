@@ -38,4 +38,8 @@ public class MayBayController {
 	public List<String> getLoaiVN280(){
 		return mayBayRepository.getLoaiVN280();
 	}
+	@GetMapping("/cau16")
+	public List<Object> cau16(){
+		return mayBayRepository.cau16();
+	}
 }

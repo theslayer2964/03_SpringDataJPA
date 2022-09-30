@@ -36,4 +36,8 @@ public class ChuyenBayController {
 		public List<ChuyenBay> getCBBoiMBA320(){
 			return chuyenBayRepository.getCBBoiMBA320();
 		}
+		@GetMapping("/cau17")
+		public List<ChuyenBay> cau17(){
+			return chuyenBayRepository.cau17();
+		}
 }

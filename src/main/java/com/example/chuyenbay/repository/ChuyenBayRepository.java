@@ -25,4 +25,7 @@ public interface ChuyenBayRepository extends CrudRepository<ChuyenBay, String>{
 	
 	@Query(value = " select * from chuyenbay where dodai < (select tambay from maybay where Loai like '%Airbus A320%') ", nativeQuery = true)
 	List<ChuyenBay> getCBBoiMBA320();
+	@Query(value = " select * from chuyenbay where GaDi in ( select GaDen from chuyenbay) and GaDen in (select GaDi from chuyenbay)", nativeQuery = true)
+	List<ChuyenBay> cau17();
+	
 }
