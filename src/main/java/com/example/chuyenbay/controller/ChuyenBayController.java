@@ -20,4 +20,9 @@ public class ChuyenBayController {
 		public List<ChuyenBay> getListCBDiDAD(){
 			return chuyenBayRepository.getChuyenBayDiDAD();
 		}
+		@GetMapping("/getChuyenBayTheoDoDai")
+		public List<ChuyenBay> getListCBTheoDoDai(){
+			return chuyenBayRepository.getChuyenBayTheoDoDai();
+		}
+		
 }

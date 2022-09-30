@@ -13,4 +13,7 @@ public interface ChuyenBayRepository extends CrudRepository<ChuyenBay, String>{
 	
 	@Query(value = "select * from chuyenbay where GaDi like 'DAD'", nativeQuery = true)
 	List<ChuyenBay> getChuyenBayDiDAD();
+	
+	@Query(value = "select * from chuyenbay where DoDai between 8000 and 10000 ", nativeQuery = true)
+	List<ChuyenBay> getChuyenBayTheoDoDai();
 }
