@@ -29,7 +29,7 @@ public class ChuyenBayController {
 			return chuyenBayRepository.getChuyenBayHCMDiBMT();
 		}
 		@GetMapping("/getSoChuyenBayHCM")
-		public List<ChuyenBay> getSoChuyenBayHCM(){
+		public int getSoChuyenBayHCM(){
 			return chuyenBayRepository.getSoChuyenBayHCM();
 		}
 		
