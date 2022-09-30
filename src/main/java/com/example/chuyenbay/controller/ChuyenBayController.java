@@ -32,5 +32,8 @@ public class ChuyenBayController {
 		public int getSoChuyenBayHCM(){
 			return chuyenBayRepository.getSoChuyenBayHCM();
 		}
-		
+		@GetMapping("/getCBBoiMBA320")
+		public List<ChuyenBay> getCBBoiMBA320(){
+			return chuyenBayRepository.getCBBoiMBA320();
+		}
 }
