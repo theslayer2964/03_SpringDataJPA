@@ -32,4 +32,10 @@ public interface NhanVienRepository extends CrudRepository<NhanVien, String> {
 	List<String> getTenNvLaiBoeing();
 	@Query(value = "select MaNV from chungnhan group by MaNV having count(MaMB) = 3", nativeQuery = true)
 	List<String> getMaNV3CN();
+	
+	@Query(value = "select DISTINCT MaNV, TamBay from chungnhan c join maybay m on m.MaMB = c.MaMB \r\n"
+			+ "where MaNV in \r\n"
+			+ "	(select MaNV from chungnhan h group by MaNV having count(h.MaMB) > 3) \r\n"
+			+ "    order by MaNV, TamBay desc", nativeQuery = true)
+	List<Object> cau23();
 }

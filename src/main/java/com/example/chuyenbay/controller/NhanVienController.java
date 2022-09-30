@@ -45,4 +45,8 @@ public class NhanVienController {
 	public List<String> getMaNV3CN(){
 		return nhanVienRepository.getMaNV3CN();
 	}
+	@GetMapping("/cau23")
+	public List<Object> cau23(){
+		return nhanVienRepository.cau23();
+	}
 }
