@@ -33,4 +33,8 @@ public class NhanVienController {
 	public List<String> getNVLai747(){
 		return nhanVienRepository.getNVLai747();
 	}
+	@GetMapping("/getNVBeingNAirbus")
+	public List<String> getNVBeingNAirbus(){
+		return nhanVienRepository.getNVBeingNAirbus();
+	}
 }
