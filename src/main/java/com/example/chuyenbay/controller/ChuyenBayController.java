@@ -56,4 +56,8 @@ public class ChuyenBayController {
 		public List<Object> chuyenBayGaDiTrc12h(){
 			return chuyenBayRepository.chuyenBayGaDiTrc12h();
 		}
+		@GetMapping("/chuyenBayAllBoeing")
+		public List<ChuyenBay> chuyenBayAllBoeing(){
+			return chuyenBayRepository.chuyenBayAllBoeing();
+		}
 }
