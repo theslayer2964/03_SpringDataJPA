@@ -41,4 +41,8 @@ public class NhanVienController {
 	public List<String> getTenNvLaiBoeing(){
 		return nhanVienRepository.getTenNvLaiBoeing();
 	}
+	@GetMapping("/getMaNV3CN")
+	public List<String> getMaNV3CN(){
+		return nhanVienRepository.getMaNV3CN();
+	}
 }
