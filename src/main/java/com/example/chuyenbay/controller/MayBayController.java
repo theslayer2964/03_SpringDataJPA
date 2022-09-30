@@ -30,5 +30,9 @@ public class MayBayController {
 	public List<String> getLoaiBoeing(){
 		return mayBayRepository.getLoaiBoeing();
 	}
+	@GetMapping("/getMaMBNguyenLai")
+	public List<Integer> getMaMBNguyenLai(){
+		return mayBayRepository.getMaMBNguyenLai();
+	}
 	
 }
