@@ -40,4 +40,8 @@ public class ChuyenBayController {
 		public List<ChuyenBay> cau17(){
 			return chuyenBayRepository.cau17();
 		}
+		@GetMapping("/chuyenBayMoiGa")
+		public List<Object> chuyenBayMoiGa(){
+			return chuyenBayRepository.chuyenBayMoiGa();
+		}
 }

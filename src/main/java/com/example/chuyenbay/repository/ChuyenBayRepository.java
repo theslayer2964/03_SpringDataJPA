@@ -27,5 +27,7 @@ public interface ChuyenBayRepository extends CrudRepository<ChuyenBay, String>{
 	List<ChuyenBay> getCBBoiMBA320();
 	@Query(value = " select * from chuyenbay where GaDi in ( select GaDen from chuyenbay) and GaDen in (select GaDi from chuyenbay)", nativeQuery = true)
 	List<ChuyenBay> cau17() ;
+	@Query(value = "select GaDi, count(MaCB) as 'SoChuyen' from  chuyenbay group by GaDi ", nativeQuery = true)
+	List<Object> chuyenBayMoiGa() ;
 	
 }
