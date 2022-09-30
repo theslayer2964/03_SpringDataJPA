@@ -45,4 +45,6 @@ public interface NhanVienRepository extends CrudRepository<NhanVien, String> {
 	List<NhanVien> getNVKoPhiCong();
 	@Query(value = "select manv from nhanvien order by luong desc limit 10", nativeQuery = true)
 	List<String> getMaNVLuongCaoNhat();
+	@Query(value = "select sum(luong) from chungnhan cn left join nhanvien nv on cn.MaNV = nv.MaNV ", nativeQuery = true)
+	List<Double> getLuongTraPhiCong();
 }

@@ -61,4 +61,8 @@ public class NhanVienController {
 	public List<String> getMaNVLuongCaoNhat(){
 		return nhanVienRepository.getMaNVLuongCaoNhat();
 	}
+	@GetMapping("/getLuongTraPhiCong")
+	public List<Double> getLuongTraPhiCong(){
+		return nhanVienRepository.getLuongTraPhiCong();
+	}
 }
