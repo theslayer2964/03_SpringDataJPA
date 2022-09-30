@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 public class ChuyenBay {
 	
 	@Id
-	@Column(name ="MaCB")
+	@Column(name ="MaCB" , columnDefinition = "varchar(5)")
 	private String maCB;
 	@Column(name = "GaDi")
 	private String gaDi;
@@ -38,12 +38,15 @@ public class ChuyenBay {
 	public ChuyenBay() {
 		// TODO Auto-generated constructor stub
 	}
+	
 	public String getMaCB() {
 		return maCB;
 	}
+
 	public void setMaCB(String maCB) {
 		this.maCB = maCB;
 	}
+
 	public String getGaDi() {
 		return gaDi;
 	}

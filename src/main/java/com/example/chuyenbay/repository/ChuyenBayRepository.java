@@ -19,4 +19,7 @@ public interface ChuyenBayRepository extends CrudRepository<ChuyenBay, String>{
 	
 	@Query(value = "select * from chuyenbay where GaDi like 'SGN' and GaDen like 'BMV' ", nativeQuery = true)
 	List<ChuyenBay> getChuyenBayHCMDiBMT();
+	
+	@Query(value = "SELECT COUNT(*) from chuyenbay where GaDi like 'SGN' ", nativeQuery = true)
+	int getSoChuyenBayHCM();
 }

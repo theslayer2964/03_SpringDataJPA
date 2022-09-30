@@ -26,5 +26,9 @@ public class MayBayController {
 	public List<String> getMBTamBay10(){
 		return mayBayRepository.findLoaiMBTam10KM();
 	}
+	@GetMapping("/getLoaiBoeing")
+	public List<String> getLoaiBoeing(){
+		return mayBayRepository.getLoaiBoeing();
+	}
 	
 }
