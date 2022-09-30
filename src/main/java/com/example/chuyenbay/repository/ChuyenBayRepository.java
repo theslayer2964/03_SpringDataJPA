@@ -33,5 +33,7 @@ public interface ChuyenBayRepository extends CrudRepository<ChuyenBay, String>{
 	List<Object> chuyenBayMoiGaChiPhi() ;
 	@Query(value = "  select * from chuyenbay where Hour(gioDi) < 12", nativeQuery = true)
 	List<ChuyenBay> chuyenBayTrc12() ;
+	@Query(value = "select GaDi, count(MaCB) as 'SoChuyen' from  chuyenbay where Hour(gioDi) < 12 group by GaDi ", nativeQuery = true)
+	List<Object> chuyenBayGaDiTrc12h() ;
 	
 }

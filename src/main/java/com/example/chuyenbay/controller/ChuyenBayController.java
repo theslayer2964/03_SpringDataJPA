@@ -52,4 +52,8 @@ public class ChuyenBayController {
 		public List<ChuyenBay> chuyenBayTrc12(){
 			return chuyenBayRepository.chuyenBayTrc12();
 		}
+		@GetMapping("/chuyenBayGaDiTrc12h")
+		public List<Object> chuyenBayGaDiTrc12h(){
+			return chuyenBayRepository.chuyenBayGaDiTrc12h();
+		}
 }
